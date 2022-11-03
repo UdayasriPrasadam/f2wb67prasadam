@@ -6,4 +6,14 @@ block content
 
   p Udayasri Prasadam
   
-  button.btn.btn-danger(type = 'button') Press Me
+  button(type="button",onclick="doBump()" class="btn btn-danger") Press Me
+
+  div(id="bump") Bump the count
+  script.
+    var count=0;
+    var bump=1;
+    function doBump() {
+      count = count+bump;
+      bump++;
+      document.getElementById("bump").innerHTML=`Count ${count} with bump ${bump}`
+    }
